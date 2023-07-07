@@ -10,4 +10,4 @@ function teste() {
 }
 
 teste()
-console.log(local)
+// console.log(local) -> aqui retorna um erro, não consegue acessar a variavel local
