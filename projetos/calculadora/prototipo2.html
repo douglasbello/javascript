@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="prototipo2.js"></script>
+    <title>Calculadora</title>
+</head>
+<body onload="alert('A página foi carregada.')">
+    <label for="first-number">First number:</label><br>
+    <input type="number" id="first-number"><br>
+    <label for="second-number">Second number:</label><br>
+    <input type="number" id="second-number"><br>
+
+    <button onclick="Sum();">Sum</button>
+    <p id="result"></p>
+
+    <script>
+        function Sum() {
+            const firstNumber = parseInt(document.getElementById("first-number").value);
+            const secondNumber = parseInt(document.getElementById("second-number").value);
+
+            if (Number.isInteger(firstNumber.valueOf()) == false || Number.isInteger(secondNumber.valueOf()) == false) {
+                alert('Os dois números devem ser inteiros.')
+                return;
+            }
+
+            const result = Somar(firstNumber, secondNumber);
+            document.getElementById("result").innerText = "Resultado: " + result;
+        }
+
+    </script>
+
+    <p onload="alert('Hello World')"></p>
+</body>
+</html>
